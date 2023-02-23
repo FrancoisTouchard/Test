@@ -20,7 +20,7 @@ const Search = () => {
     getGifs();
   }, [userQuery]);
 
-    console.log("la data", gifs);
+    // console.log("la data", gifs);
 
   return (
     <div className="searchContainer">

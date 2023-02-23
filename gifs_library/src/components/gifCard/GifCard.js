@@ -12,6 +12,7 @@ const GifCard = (data) => {
   const [openModal, setOpenModal] = useState(false);
   const handleOpenModal = () => setOpenModal(true);
   const handleCloseModal = () => setOpenModal(false);
+  const [category, setCategory] = useState("");
 
   // style for modal
   const styleModal = {
@@ -75,20 +76,24 @@ const GifCard = (data) => {
                 label="Add a category (optional)"
                 placeholder="ex: Funny Animals"
                 variant="outlined"
-                onChange={(e) => console.log(e.target.value)}
-                //   onChange={(e) =>
-                //     setRestaurantCreate({
-                //       ...restaurantCreate,
-                //       name: e.target.value,
-                //     })
-                //   }
+                onChange={(e) => setCategory(e.target.value)}
                 sx={{ mt: 2, width: "400px" }}
               />
               <Button
                 sx={{ mt: 3, ml: 3 }}
                 variant="contained"
-                // endIcon={<SendIcon />}
-                // onClick={createRestaurant}
+                onClick={() => {
+                  const gifToSave = {
+                    url: data.data.images.fixed_height.url,
+                    title: data.data.title,
+                    category: category,
+                  };
+                  const savedGifs =
+                    JSON.parse(localStorage.getItem("savedGifs")) || [];
+                  savedGifs.push(gifToSave);
+                  localStorage.setItem("savedGifs", JSON.stringify(savedGifs));
+                  handleCloseModal();
+                }}
               >
                 Save
               </Button>

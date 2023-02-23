@@ -1,6 +1,8 @@
 .myGifsContainer {
   background-color: red;
-  width: 100%;
+  width: 100vw;
   height: 50vh;
   /* max-height: 50vh; */
+  display: flex;
+  flex-direction: column;
 }
