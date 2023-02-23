@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
+import { DeleteGif } from "../gifActions/deleteGif/DeleteGif";
 import "./myGifs.css";
+
 const getSavedGifs = () => {
-  // console.log("HEYA", localStorage.savedGifs.length);
-  // console.log("HEYA", localStorage.savedGifs);
   const savedGifs = localStorage.getItem("savedGifs") || [];
   const sortedGifs = JSON.parse(savedGifs);
   sortedGifs.sort(compareCategories);
@@ -32,13 +32,15 @@ const MyGifs = () => {
   return (
     <div className="myGifsContainer">
       <p>MyGifs BOX</p>
-      {myGifsLibrary.map((gif) => (
-        <div key={gif.title}>
-          <img src={gif.url} alt={gif.title} />
-          <p>{gif.category}</p>
-        </div>
-      ))}
-      {}
+      <div className="cardsLibraryContainer">
+        {myGifsLibrary.map((gif) => (
+          <div key={gif.title}>
+            <img src={gif.url} alt={gif.title} />
+            {gif.category && <p id="gifCategory">#{gif.category}</p>}
+            {/* <DeleteGif getSavedGifs={getSavedGifs} gif={gif} /> */}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,8 +1,20 @@
 .myGifsContainer {
-  background-color: red;
+  background-color: black;
   width: 100vw;
-  height: 50vh;
-  /* max-height: 50vh; */
+  min-height: 50vh;
+  max-height: fit-content;
   display: flex;
   flex-direction: column;
+}
+
+.cardsLibraryContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2%;
+  justify-content: space-evenly;
+}
+
+#gifCategory{
+  color:white;
 }
