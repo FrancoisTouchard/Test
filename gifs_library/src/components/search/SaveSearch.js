@@ -4,7 +4,7 @@ import SearchBar from "./searchBar/SearchBar";
 import SearchResults from "./searchResults/SearchResults";
 
 const Search = () => {
-  const [gifs, setGifs] = useState([]);
+  const [data, setData] = useState([]);
   const [userQuery, setUserQuery] = useState("");
 
   useEffect(() => {
@@ -15,13 +15,13 @@ const Search = () => {
       );
       const res = await response.json();
       console.log("RES", res);
-      setGifs(res.data);
+      setData(res);
       // console.log("ONE", data.data[0].bitly_url)
     }
     getGifs();
   }, [userQuery]);
 
-  console.log("la data", gifs);
+  console.log("la data", data);
 
   return (
     <div className="searchContainer">
@@ -30,7 +30,7 @@ const Search = () => {
         <SearchBar handleChange={setUserQuery} />
       </div>
       <div>
-        <SearchResults gifs={gifs} />
+        <SearchResults fetchedData={data} />
       </div>
     </div>
   );
