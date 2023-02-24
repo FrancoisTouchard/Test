@@ -3,16 +3,12 @@ import { Button } from "@mui/material";
 import { lightBlue } from "@mui/material/colors";
 import { ThemeProvider } from "styled-components";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-// import Modal from "@mui/material/Modal";
 import { useState } from "react";
-import AddGif from "../gifActions/addGif/AddGif";
-import MyGifs from "../myGifs/MyGifs";
+import AddGif from "../../gifActions/addGif/AddGif";
 
-const GifCard = (data) => {
-  // console.log("HHHHH", data);
+const GifCard = ({ data, addGifToGifList }) => {
   const [openModal, setOpenModal] = useState(false);
   const handleOpenModal = () => setOpenModal(true);
- 
 
   // color theme for buttons
   const theme = {
@@ -25,11 +21,10 @@ const GifCard = (data) => {
 
   return (
     <div className="gifAndFavContainer">
-      <img src={data.data.images.fixed_height.url} alt={data.title} />
+      <img src={data.images.fixed_height.url} alt={data.title} />
       <ThemeProvider theme={theme}>
         <Button
           variant="contained"
-          //   endIcon={<FavoriteIcon />}
           onClick={(e) => {
             e.preventDefault();
             handleOpenModal();
@@ -43,12 +38,10 @@ const GifCard = (data) => {
         data={data}
         openModal={openModal}
         setOpenModal={setOpenModal}
+        addGifToGifList={addGifToGifList}
       />
     </div>
   );
 };
 
 export default GifCard;
-
-//         <img key={gif.id} src={gif.images.fixed_height.url} alt={gif.title} />
-//         <img key={gif.id} src={gif.images.fixed_height_small.url} alt={gif.title} />

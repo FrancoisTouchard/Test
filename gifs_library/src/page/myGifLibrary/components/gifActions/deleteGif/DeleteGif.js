@@ -1,15 +1,13 @@
 import { Button } from "@mui/material";
-// import { lightBlue } from "@mui/material/colors";
-// import { ThemeProvider } from "styled-components";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { ThemeProvider } from "styled-components";
-import { lightBlue } from "@mui/material/colors";
+import { red } from "@mui/material/colors";
 
 // color theme for buttons
-const theme = {
+const themos = {
   palette: {
-    primary: {
-      main: lightBlue,
+    secondary: {
+      main: red[800],
     },
   },
 };
@@ -22,11 +20,17 @@ export const DeleteGif = ({ gif, gifs, setGifs }) => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themos}>
       <Button
         variant="contained"
         onClick={handleDelete}
-        style={{ width: "5%", alignSelf: "center", marginTop: "2%" }}
+        style={{
+          maxWidth: "30px",
+          maxHeight: "30px",
+          minWidth: "30px",
+          minHeight: "30px",
+        }}
+        color="secondary"
       >
         <DeleteIcon />
       </Button>

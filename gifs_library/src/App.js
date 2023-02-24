@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 // import "./App.css";
-import MyGifLibrary from "./page/MyGifLibrary";
+
+import MyGifLibrary from "./page/myGifLibrary/MyGifLibrary";
 
 function App() {
   return (

@@ -1,0 +1,14 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBar {
+  border-radius: 33px;
+  height: 30px;
+  width: 20%;
+  border-color:white;
+  margin-top: 1%;
+  text-align: center;
+}

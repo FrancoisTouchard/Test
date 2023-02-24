@@ -2,7 +2,7 @@ import "./header.css";
 const Header = () => {
   return (
     <div className="headerContainer">
-      <p>HEADER</p>
+      <p>Header / My Gif Library - The place to keep your best gifs</p>
     </div>
   );
 };

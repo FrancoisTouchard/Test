@@ -2,33 +2,38 @@ import { useState } from "react";
 import { TextField, Typography, Button, Modal, Box } from "@mui/material";
 import { ThemeProvider } from "styled-components";
 import { lightBlue } from "@mui/material/colors";
+import { useAddGif } from "./useAddGif";
 
-const AddGif = ({ data, openModal, setOpenModal }) => {
-  const [category, setCategory] = useState("");
-  const handleCloseModal = () => setOpenModal(false);
+// style for modal
+const styleModal = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 700,
+  height: 300,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
-  // style for modal
-  const styleModal = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 700,
-    height: 300,
-    bgcolor: "background.paper",
-    border: "2px solid #000",
-    boxShadow: 24,
-    p: 4,
-  };
-
-  // color theme for buttons
-  const theme = {
-    palette: {
-      primary: {
-        main: lightBlue,
-      },
+// color theme for buttons
+const theme = {
+  palette: {
+    primary: {
+      main: lightBlue,
     },
-  };
+  },
+};
+
+const AddGif = ({ data, openModal, setOpenModal, addGifToGifList }) => {
+  const { onClick, setCategory, handleCloseModal } = useAddGif(
+    data,
+    setOpenModal,
+    /* setMyGifsLibrary,*/
+    addGifToGifList
+  );
 
   return (
     <div className="gifAndFavContainer">
@@ -59,20 +64,7 @@ const AddGif = ({ data, openModal, setOpenModal }) => {
               <Button
                 sx={{ mt: 3, ml: 3 }}
                 variant="contained"
-                onClick={() => {
-                  const gifToSave = {
-                    url: data.data.images.fixed_height.url,
-                    title: data.data.title,
-                    category: category,
-                  };
-                  // console.log("XXX", gifToSave)
-                  const savedGifs =
-                    JSON.parse(localStorage.getItem("savedGifs")) || [];
-                  savedGifs.push(gifToSave);
-                  localStorage.setItem("savedGifs", JSON.stringify(savedGifs));
-                  // console.log("AAA", savedGifs)
-                  handleCloseModal();
-                }}
+                onClick={onClick}
               >
                 Save
               </Button>
