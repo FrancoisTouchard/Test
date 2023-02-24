@@ -3,7 +3,7 @@ import { TextField, Typography, Button, Modal, Box } from "@mui/material";
 import { ThemeProvider } from "styled-components";
 import { lightBlue } from "@mui/material/colors";
 
-const AddGif = ({data, openModal, setOpenModal}) => {
+const AddGif = ({ data, openModal, setOpenModal }) => {
   const [category, setCategory] = useState("");
   const handleCloseModal = () => setOpenModal(false);
 
@@ -48,12 +48,12 @@ const AddGif = ({data, openModal, setOpenModal}) => {
                 Add this gif to your library ?
               </Typography>
               <TextField
-                id="outlined-basic"
+                id="categoryInput"
                 name="category"
                 label="Add a category (optional)"
                 placeholder="ex: Funny Animals"
                 variant="outlined"
-                onChange={(e) => setCategory(e.target.value)}
+                onChange={(e) => setCategory(e.target.value.toUpperCase())}
                 sx={{ mt: 2, width: "400px" }}
               />
               <Button
@@ -65,10 +65,12 @@ const AddGif = ({data, openModal, setOpenModal}) => {
                     title: data.data.title,
                     category: category,
                   };
+                  // console.log("XXX", gifToSave)
                   const savedGifs =
                     JSON.parse(localStorage.getItem("savedGifs")) || [];
                   savedGifs.push(gifToSave);
                   localStorage.setItem("savedGifs", JSON.stringify(savedGifs));
+                  // console.log("AAA", savedGifs)
                   handleCloseModal();
                 }}
               >

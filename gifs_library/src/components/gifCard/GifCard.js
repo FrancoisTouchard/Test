@@ -6,11 +6,13 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 // import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import AddGif from "../gifActions/addGif/AddGif";
+import MyGifs from "../myGifs/MyGifs";
 
 const GifCard = (data) => {
-  // console.log("HHHHH", data)
+  // console.log("HHHHH", data);
   const [openModal, setOpenModal] = useState(false);
   const handleOpenModal = () => setOpenModal(true);
+ 
 
   // color theme for buttons
   const theme = {
@@ -20,6 +22,7 @@ const GifCard = (data) => {
       },
     },
   };
+
   return (
     <div className="gifAndFavContainer">
       <img src={data.data.images.fixed_height.url} alt={data.title} />
@@ -36,7 +39,11 @@ const GifCard = (data) => {
           <FavoriteIcon />
         </Button>
       </ThemeProvider>
-      <AddGif data={data} openModal={openModal} setOpenModal={setOpenModal} />
+      <AddGif
+        data={data}
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+      />
     </div>
   );
 };

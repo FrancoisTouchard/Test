@@ -2,23 +2,34 @@ import { Button } from "@mui/material";
 // import { lightBlue } from "@mui/material/colors";
 // import { ThemeProvider } from "styled-components";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { lightBlue } from "@mui/material/colors";
 
-export const DeleteGif = ({ getSavedGifs, gif }) => {
-  const [savedGifs, setSavedGifs] = useState(getSavedGifs());
-  const handleDelete = (gif) => {
-    const updatedGifs = savedGifs.filter((item) => item.url !== gif.url);
+// color theme for buttons
+const theme = {
+  palette: {
+    primary: {
+      main: lightBlue,
+    },
+  },
+};
+
+export const DeleteGif = ({ gif, gifs, setGifs }) => {
+  const handleDelete = () => {
+    const updatedGifs = gifs.filter((item) => item.title !== gif.title);
+    setGifs(updatedGifs);
     localStorage.setItem("savedGifs", JSON.stringify(updatedGifs));
-    setSavedGifs(updatedGifs);
   };
+
   return (
-    <Button
-      variant="contained"
-      //   endIcon={<FavoriteIcon />}
-      onClick={() => handleDelete()}
-      style={{ width: "5%", alignSelf: "center", marginTop: "2%" }}
-    >
-      <DeleteIcon />
-    </Button>
+    <ThemeProvider theme={theme}>
+      <Button
+        variant="contained"
+        onClick={handleDelete}
+        style={{ width: "5%", alignSelf: "center", marginTop: "2%" }}
+      >
+        <DeleteIcon />
+      </Button>
+    </ThemeProvider>
   );
 };

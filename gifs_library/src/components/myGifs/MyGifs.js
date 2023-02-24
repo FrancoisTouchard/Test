@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { DeleteGif } from "../gifActions/deleteGif/DeleteGif";
 import "./myGifs.css";
+import AddGif from "../gifActions/addGif/AddGif";
 
 const getSavedGifs = () => {
   const savedGifs = localStorage.getItem("savedGifs") || [];
@@ -12,11 +13,11 @@ const getSavedGifs = () => {
 // function to handle the display of gifs by category, checks if there is a category or not to determine the sorting
 function compareCategories(a, b) {
   if (!a.category && !b.category) {
-    return 0;
-  } else if (!a.category) {
-    return -1;
-  } else if (!b.category) {
     return 1;
+  } else if (!a.category) {
+    return 1;
+  } else if (!b.category) {
+    return -1;
   } else {
     return a.category > b.category ? 1 : -1;
   }
@@ -37,7 +38,11 @@ const MyGifs = () => {
           <div key={gif.title}>
             <img src={gif.url} alt={gif.title} />
             {gif.category && <p id="gifCategory">#{gif.category}</p>}
-            {/* <DeleteGif getSavedGifs={getSavedGifs} gif={gif} /> */}
+            <DeleteGif
+              gif={gif}
+              gifs={myGifsLibrary}
+              setGifs={setMyGifsLibrary}
+            />
           </div>
         ))}
       </div>
