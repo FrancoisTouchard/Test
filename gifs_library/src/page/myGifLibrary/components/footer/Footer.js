@@ -2,7 +2,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <div className="footerContainer">
-      <p>Footer</p>
+      <p id="logoFooter">My Gif Library</p>
     </div>
   );
 };
