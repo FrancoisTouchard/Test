@@ -1,39 +1,18 @@
 import "./gifCard.css";
-import { Button } from "@mui/material";
-import { lightBlue } from "@mui/material/colors";
-import { ThemeProvider } from "styled-components";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import AddGif from "../../../../gifAddAndDelete/addGif/AddGif";
+import { FavButton } from "./favButton/FavButton";
 
 const GifCard = ({ data, addGifToGifList }) => {
   const [openModal, setOpenModal] = useState(false);
   const handleOpenModal = () => setOpenModal(true);
 
-  // color theme for buttons
-  const theme = {
-    palette: {
-      primary: {
-        main: lightBlue,
-      },
-    },
-  };
-
   return (
     <div className="gifAndFavContainer">
       <img src={data.images.fixed_height.url} alt={data.title} />
-      <ThemeProvider theme={theme}>
-        <Button
-          variant="contained"
-          onClick={(e) => {
-            e.preventDefault();
-            handleOpenModal();
-          }}
-          style={{ width: "5%", alignSelf: "center", marginTop: "2%" }}
-        >
-          <FavoriteIcon />
-        </Button>
-      </ThemeProvider>
+      <div className="hoverFavBtn">
+        <FavButton handleOpenModal={handleOpenModal} />
+      </div>
       <AddGif
         data={data}
         openModal={openModal}

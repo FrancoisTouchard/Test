@@ -10,18 +10,34 @@ const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary }) => {
           <img
             src={gif.url}
             alt={gif.title}
-            style={{ height: "90%", width: "auto", maxWidth: "100%" }}
+            style={{
+              height: "90%",
+              width: "auto",
+              maxWidth: "100%",
+              borderRadius: "33px",
+            }}
           />
-          <div className="hoverBtn">
+          <div className="hoverDeleteBtn">
             <DeleteGif
               gif={gif}
               gifs={myGifsLibrary}
               setGifs={setMyGifsLibrary}
             />
           </div>
-          <div className="categoryAndDeleteContainer">
+          <div
+            className="categoryAndDeleteContainer"
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             {gif.category && (
-              <p id="gifCategory" style={{ color: "white" }}>
+              <p
+                id="gifCategory"
+                style={{
+                  color: "white",
+                }}
+              >
                 #{gif.category}
               </p>
             )}

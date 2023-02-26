@@ -24,15 +24,15 @@
   align-items: center;
 }
 
-.hoverBtn {
+.hoverDeleteBtn {
   position: absolute;
   top: 15%;
   left: 85%;
   transform: translate(-15%, -85%);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.singleCardContainer:hover .hoverBtn {
+.singleCardContainer:hover .hoverDeleteBtn {
   opacity: 1;
 }

@@ -2,23 +2,7 @@
   background-color: black;
 }
 
-/* .myGifsContainer {
-  background-color: red;
-  width: 100vw;
-  min-height: 70vh;
-  max-height: fit-content;
-  display: flex;
-  flex-direction: column;
-} */
-
-/* .cardsLibraryContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 2%;
-  justify-content: space-evenly;
-}
-
-#gifCategory {
+#myGifsTitle {
   color: white;
-} */
+  text-align: center;
+}
