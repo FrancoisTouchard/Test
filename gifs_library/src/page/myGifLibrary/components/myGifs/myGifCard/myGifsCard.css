@@ -1,4 +1,4 @@
-.myGifsCardContainer {
+.myGifsCardsContainer {
   display: flex;
   flex-wrap: wrap;
   min-height: 70vh;

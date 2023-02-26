@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Button } from "@mui/material";
-import "./searchBar.css";
-import SearchDisplay from "./searchDisplay/SearchDisplay";
+import "./openSearch.css";
+import SearchSection from "./searchDisplay/SearchSection";
 
-const SearchBar = ({
+const OpenSearch = ({
   searchGif,
   gifsQueryResult,
   addGifToGifList,
@@ -24,7 +24,7 @@ const SearchBar = ({
       </div>
       <div>
         {showSearch && (
-          <SearchDisplay
+          <SearchSection
             gifsQueryResult={gifsQueryResult}
             searchGif={searchGif}
             addGifToGifList={addGifToGifList}
@@ -36,4 +36,4 @@ const SearchBar = ({
   );
 };
 
-export default SearchBar;
+export default OpenSearch;

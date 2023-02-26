@@ -1,5 +1,5 @@
 import Header from "./components/header/Header";
-import SearchBar from "./components/search/SearchBar";
+import OpenSearch from "./components/search/OpenSearch";
 import MyGifs from "./components/myGifs/MyGifs";
 import Footer from "./components/footer/Footer";
 import { useHomePage } from "./useHomePage";
@@ -21,7 +21,7 @@ const HomePage = () => {
     <div className="mainDiv">
       <Header />
       <ToastContainer />
-      <SearchBar
+      <OpenSearch
         gifsQueryResult={gifsQueryResult}
         searchGif={searchGif}
         setMyGifsLibrary={setMyGifsLibrary}

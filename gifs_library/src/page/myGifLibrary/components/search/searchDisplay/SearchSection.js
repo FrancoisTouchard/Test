@@ -1,8 +1,8 @@
-import "./searchDisplay.css";
+import "./searchSection.css";
 import SearchBarInput from "./searchBarInput/SearchBarInput";
 import SearchResults from "./searchResults/SearchResults";
 
-const SearchDisplay = ({
+const SearchSection = ({
   searchGif,
   gifsQueryResult,
   addGifToGifList,
@@ -13,7 +13,7 @@ const SearchDisplay = ({
       <div>
         <SearchBarInput handleChange={searchGif} />
       </div>
-      <div>
+      <div className="searchResultsContainer">
         <SearchResults
           gifs={gifsQueryResult}
           addGifToGifList={addGifToGifList}
@@ -24,4 +24,4 @@ const SearchDisplay = ({
   );
 };
 
-export default SearchDisplay;
+export default SearchSection;

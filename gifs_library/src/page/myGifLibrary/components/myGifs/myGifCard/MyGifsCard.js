@@ -3,7 +3,7 @@ import "./myGifsCard.css";
 
 const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary, notifyDeleted }) => {
   return (
-    <div className="myGifsCardContainer">
+    <div className="myGifsCardsContainer">
       {myGifsLibrary.map((gif, index) => (
         <div className="singleCardContainer" key={index}>
           <img src={gif.url} alt={gif.title} />

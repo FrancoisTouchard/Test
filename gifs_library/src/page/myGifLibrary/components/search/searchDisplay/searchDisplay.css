@@ -1,9 +1,0 @@
-.searchContainer {
-  background-color: orange;
-  width: 100vw;
-  max-width: 100%;
-  /* min-height: 50vh; */
-  max-height: fit-content;
-  display: flex;
-  flex-direction: column;
-}

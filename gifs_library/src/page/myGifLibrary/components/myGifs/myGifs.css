@@ -1,8 +1,15 @@
 .myGifsContainer {
   background-color: black;
+  min-height: 75vh;
+  width: 100vw;
 }
 
 #myGifsTitle {
+  color: white;
+  text-align: center;
+}
+
+#emptyGifs {
   color: white;
   text-align: center;
 }

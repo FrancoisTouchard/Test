@@ -1,11 +1,7 @@
 import GifCard from "./gifCard/GifCard";
 import "./searchResults.css";
 
-const SearchResults = ({
-  gifs,
-  addGifToGifList,
-  notifyAdded,
-}) => {
+const SearchResults = ({ gifs, addGifToGifList, notifyAdded }) => {
   const cards = gifs.map((gif, index) => {
     return (
       <GifCard
@@ -16,7 +12,7 @@ const SearchResults = ({
       />
     );
   });
-  return <div className="cardsContainer">{cards}</div>;
+  return <div className="cardsResultContainer">{cards}</div>;
 };
 
 export default SearchResults;

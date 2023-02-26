@@ -1,0 +1,8 @@
+.showSearch {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  width: 100%;
+}
