@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { lightBlue } from "@mui/material/colors";
 import { ThemeProvider } from "styled-components";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import AddIcon from "@mui/icons-material/Add";
 
 // color theme for buttons
 const theme = {
@@ -23,7 +23,7 @@ export const FavButton = ({ handleOpenModal }) => {
         }}
         style={{ width: "5%", alignSelf: "center", marginTop: "2%" }}
       >
-        <FavoriteIcon />
+        <AddIcon />
       </Button>
     </ThemeProvider>
   );
