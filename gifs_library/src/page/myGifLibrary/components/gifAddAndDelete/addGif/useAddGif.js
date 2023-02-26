@@ -3,7 +3,6 @@ import { useState } from "react";
 export const useAddGif = (
   data,
   setOpenModal,
-  /*setMyGifsLibrary,*/
   addGifToGifList
 ) => {
   const [category, setCategory] = useState("");
@@ -19,7 +18,6 @@ export const useAddGif = (
     const savedGifs = JSON.parse(localStorage.getItem("savedGifs")) || [];
     savedGifs.push(gifToSave);
     localStorage.setItem("savedGifs", JSON.stringify(savedGifs));
-    // setMyGifsLibrary(savedGifs);
     addGifToGifList(gifToSave);
     handleCloseModal();
   };

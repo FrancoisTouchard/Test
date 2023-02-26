@@ -3,6 +3,7 @@ import Header from "./components/header/Header";
 import SearchBar from "./components/search/SearchBar";
 import { useMyGifLibrary } from "./useMyGifLibrary";
 import Footer from "./components/footer/Footer";
+import "./myGifLibrary.css";
 
 const MyGifLibrary = () => {
   const {

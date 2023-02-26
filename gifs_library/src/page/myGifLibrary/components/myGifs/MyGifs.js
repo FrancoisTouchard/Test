@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
-import { getSavedGifs } from "../../../../service/localStorage";
 import "./myGifs.css";
-import MyGifsCard from "./MyGifsCard";
+import MyGifsCard from "./myGifCard/MyGifsCard";
 
 const MyGifs = ({ myGifsLibrary, setMyGifsLibrary }) => {
   return (

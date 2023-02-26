@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { getGifs } from "../../service/giphyApi";
-import { getSavedGifs } from "../../service/localStorage";
+import { getGifs } from "../../services/giphyApi";
+import { getSavedGifs } from "../../services/localStorage";
 
 // function to handle the display of gifs by category, checks if there is a category or not to determine the sorting
 function compareCategories(a, b) {

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { TextField, Typography, Button, Modal, Box } from "@mui/material";
 import { ThemeProvider } from "styled-components";
 import { lightBlue } from "@mui/material/colors";
@@ -31,7 +30,6 @@ const AddGif = ({ data, openModal, setOpenModal, addGifToGifList }) => {
   const { onClick, setCategory, handleCloseModal } = useAddGif(
     data,
     setOpenModal,
-    /* setMyGifsLibrary,*/
     addGifToGifList
   );
 

@@ -1,4 +1,4 @@
-import { DeleteGif } from "../gifActions/deleteGif/DeleteGif";
+import { DeleteGif } from "../../gifAddAndDelete/deleteGif/DeleteGif";
 import "./myGifsCard.css";
 
 const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary }) => {
@@ -25,13 +25,6 @@ const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary }) => {
                 #{gif.category}
               </p>
             )}
-            {/* <div className="thrash">
-              <DeleteGif
-                gif={gif}
-                gifs={myGifsLibrary}
-                setGifs={setMyGifsLibrary}
-              />
-            </div> */}
           </div>
         </div>
       ))}
