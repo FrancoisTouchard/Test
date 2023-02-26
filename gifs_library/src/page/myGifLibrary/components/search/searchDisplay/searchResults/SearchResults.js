@@ -1,4 +1,4 @@
-import GifCard from "../gifCard/GifCard";
+import GifCard from "./gifCard/GifCard";
 import "./searchResults.css";
 
 const SearchResults = ({ gifs, addGifToGifList }) => {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@mui/material";
-import Search from "./Search";
 import "./searchBar.css";
+import SearchDisplay from "./searchDisplay/SearchDisplay";
 
 const SearchBar = ({ searchGif, gifsQueryResult, addGifToGifList }) => {
   const [showSearch, setShowSearch] = useState(false);
@@ -19,7 +19,7 @@ const SearchBar = ({ searchGif, gifsQueryResult, addGifToGifList }) => {
       </div>
       <div>
         {showSearch && (
-          <Search
+          <SearchDisplay
             gifsQueryResult={gifsQueryResult}
             searchGif={searchGif}
             addGifToGifList={addGifToGifList}

@@ -4,7 +4,7 @@ import { lightBlue } from "@mui/material/colors";
 import { ThemeProvider } from "styled-components";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
-import AddGif from "../../gifAddAndDelete/addGif/AddGif";
+import AddGif from "../../../../gifAddAndDelete/addGif/AddGif";
 
 const GifCard = ({ data, addGifToGifList }) => {
   const [openModal, setOpenModal] = useState(false);
