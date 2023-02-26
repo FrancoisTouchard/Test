@@ -9,7 +9,7 @@ const getInitialGifState = () => {
   return sortedGifs;
 };
 
-export const useMyGifLibrary = () => {
+export const useHomePage = () => {
   const [myGifsLibrary, setMyGifsLibrary] = useState(getInitialGifState());
   const [gifsQueryResult, setGifsQueryResult] = useState([]);
 

@@ -17,7 +17,6 @@ export const useAddGif = (data, setOpenModal, addGifToGifList, notifyAdded) => {
     addGifToGifList(gifToSave);
     handleCloseModal();
     notifyAdded();
-    // ici balancer le toaster
   };
 
   return {

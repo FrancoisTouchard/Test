@@ -1,12 +1,9 @@
-// import logo from './logo.svg';
-// import "./App.css";
-
-import MyGifLibrary from "./page/myGifLibrary/MyGifLibrary";
+import Homepage from "./page/myGifLibrary/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <MyGifLibrary />
+      <Homepage />
     </div>
   );
 }

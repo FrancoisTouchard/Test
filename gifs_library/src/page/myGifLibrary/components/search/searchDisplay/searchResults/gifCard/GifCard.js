@@ -1,7 +1,7 @@
 import "./gifCard.css";
 import { useState } from "react";
 import AddGif from "../../../../gifAddAndDelete/addGif/AddGif";
-import { FavButton } from "./favButton/FavButton";
+import { AddButton } from "./addButton/AddButton";
 
 const GifCard = ({ data, addGifToGifList, notifyAdded }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -11,7 +11,7 @@ const GifCard = ({ data, addGifToGifList, notifyAdded }) => {
     <div className="gifAndFavContainer">
       <img src={data.images.fixed_height.url} alt={data.title} />
       <div className="hoverFavBtn">
-        <FavButton handleOpenModal={handleOpenModal} />
+        <AddButton handleOpenModal={handleOpenModal} />
       </div>
       <AddGif
         data={data}

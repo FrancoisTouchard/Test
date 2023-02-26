@@ -2,21 +2,11 @@ import { DeleteGif } from "../../gifAddAndDelete/deleteGif/DeleteGif";
 import "./myGifsCard.css";
 
 const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary, notifyDeleted }) => {
-  console.log("YYY", myGifsLibrary);
   return (
     <div className="myGifsCardContainer">
       {myGifsLibrary.map((gif, index) => (
         <div className="singleCardContainer" key={index}>
-          <img
-            src={gif.url}
-            alt={gif.title}
-            style={{
-              height: "90%",
-              width: "auto",
-              maxWidth: "100%",
-              borderRadius: "33px",
-            }}
-          />
+          <img src={gif.url} alt={gif.title} />
           <div className="hoverDeleteBtn">
             <DeleteGif
               gif={gif}
@@ -25,23 +15,8 @@ const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary, notifyDeleted }) => {
               notifyDeleted={notifyDeleted}
             />
           </div>
-          <div
-            className="categoryAndDeleteContainer"
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            {gif.category && (
-              <p
-                id="gifCategory"
-                style={{
-                  color: "white",
-                }}
-              >
-                #{gif.category}
-              </p>
-            )}
+          <div className="categoryContainer">
+            {gif.category && <p id="gifCategory">#{gif.category}</p>}
           </div>
         </div>
       ))}

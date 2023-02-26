@@ -1,5 +1,6 @@
 import { TextField, Typography, Button, Modal, Box } from "@mui/material";
-import { ThemeProvider } from "styled-components";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+// import { ThemeProvider } from "styled-components";
 import { lightBlue } from "@mui/material/colors";
 import { useAddGif } from "./useAddGif";
 // import { ToastContainer, toast } from "react-toastify";
@@ -19,25 +20,19 @@ const styleModal = {
 };
 
 // color theme for buttons
-const theme = {
-  palette: {
-    primary: {
-      main: lightBlue,
-    },
-  },
-};
+// const theme1 = createTheme({
+//   palette: {
+//     primary: {
+//       main: lightBlue,
+//     },
+//   },
+// });
 
-// const notifyAdded = () =>
-//   toast.success("🦄 Wow so easy!", {
-//     position: "top-right",
-//     autoClose: 5000,
-//     hideProgressBar: false,
-//     closeOnClick: true,
-//     pauseOnHover: false,
-//     draggable: true,
-//     progress: undefined,
-//     theme: "colored",
-//   });
+const theme = createTheme({
+  palette: {
+    primary: lightBlue,
+  },
+});
 
 const AddGif = ({
   data,
@@ -55,18 +50,6 @@ const AddGif = ({
 
   return (
     <div className="gifAndFavContainer">
-      {/* <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-        theme="colored"
-      /> */}
       <ThemeProvider theme={theme}>
         <Modal open={openModal} onClose={handleCloseModal}>
           <Box
@@ -92,7 +75,7 @@ const AddGif = ({
                 sx={{ mt: 2, width: "400px" }}
               />
               <Button
-                sx={{ mt: 3, ml: 3 }}
+                sx={{ mt: 3, ml: 3, color: "white" }}
                 variant="contained"
                 onClick={onClick}
               >

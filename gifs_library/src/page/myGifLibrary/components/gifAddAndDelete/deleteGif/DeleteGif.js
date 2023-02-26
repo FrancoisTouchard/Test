@@ -1,16 +1,14 @@
 import { Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { ThemeProvider } from "styled-components";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
 
 // color theme for buttons
-const themos = {
+const theme = createTheme({
   palette: {
-    secondary: {
-      main: red[800],
-    },
+    secondary: red,
   },
-};
+});
 
 export const DeleteGif = ({ gif, gifs, setGifs, notifyDeleted }) => {
   const handleDelete = () => {
@@ -21,7 +19,7 @@ export const DeleteGif = ({ gif, gifs, setGifs, notifyDeleted }) => {
   };
 
   return (
-    <ThemeProvider theme={themos}>
+    <ThemeProvider theme={theme}>
       <Button
         variant="contained"
         onClick={handleDelete}
