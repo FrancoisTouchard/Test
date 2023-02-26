@@ -3,7 +3,12 @@ import { Button } from "@mui/material";
 import "./searchBar.css";
 import SearchDisplay from "./searchDisplay/SearchDisplay";
 
-const SearchBar = ({ searchGif, gifsQueryResult, addGifToGifList }) => {
+const SearchBar = ({
+  searchGif,
+  gifsQueryResult,
+  addGifToGifList,
+  notifyAdded,
+}) => {
   const [showSearch, setShowSearch] = useState(false);
 
   const handleClick = () => {
@@ -23,6 +28,7 @@ const SearchBar = ({ searchGif, gifsQueryResult, addGifToGifList }) => {
             gifsQueryResult={gifsQueryResult}
             searchGif={searchGif}
             addGifToGifList={addGifToGifList}
+            notifyAdded={notifyAdded}
           />
         )}
       </div>

@@ -1,7 +1,7 @@
 import { DeleteGif } from "../../gifAddAndDelete/deleteGif/DeleteGif";
 import "./myGifsCard.css";
 
-const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary }) => {
+const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary, notifyDeleted }) => {
   console.log("YYY", myGifsLibrary);
   return (
     <div className="myGifsCardContainer">
@@ -22,6 +22,7 @@ const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary }) => {
               gif={gif}
               gifs={myGifsLibrary}
               setGifs={setMyGifsLibrary}
+              notifyDeleted={notifyDeleted}
             />
           </div>
           <div

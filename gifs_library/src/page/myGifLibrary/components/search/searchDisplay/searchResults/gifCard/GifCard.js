@@ -3,7 +3,7 @@ import { useState } from "react";
 import AddGif from "../../../../gifAddAndDelete/addGif/AddGif";
 import { FavButton } from "./favButton/FavButton";
 
-const GifCard = ({ data, addGifToGifList }) => {
+const GifCard = ({ data, addGifToGifList, notifyAdded }) => {
   const [openModal, setOpenModal] = useState(false);
   const handleOpenModal = () => setOpenModal(true);
 
@@ -18,6 +18,7 @@ const GifCard = ({ data, addGifToGifList }) => {
         openModal={openModal}
         setOpenModal={setOpenModal}
         addGifToGifList={addGifToGifList}
+        notifyAdded={notifyAdded}
       />
     </div>
   );

@@ -2,6 +2,7 @@ import { TextField, Typography, Button, Modal, Box } from "@mui/material";
 import { ThemeProvider } from "styled-components";
 import { lightBlue } from "@mui/material/colors";
 import { useAddGif } from "./useAddGif";
+// import { ToastContainer, toast } from "react-toastify";
 
 // style for modal
 const styleModal = {
@@ -26,15 +27,46 @@ const theme = {
   },
 };
 
-const AddGif = ({ data, openModal, setOpenModal, addGifToGifList }) => {
+// const notifyAdded = () =>
+//   toast.success("🦄 Wow so easy!", {
+//     position: "top-right",
+//     autoClose: 5000,
+//     hideProgressBar: false,
+//     closeOnClick: true,
+//     pauseOnHover: false,
+//     draggable: true,
+//     progress: undefined,
+//     theme: "colored",
+//   });
+
+const AddGif = ({
+  data,
+  openModal,
+  setOpenModal,
+  addGifToGifList,
+  notifyAdded,
+}) => {
   const { onClick, setCategory, handleCloseModal } = useAddGif(
     data,
     setOpenModal,
-    addGifToGifList
+    addGifToGifList,
+    notifyAdded
   );
 
   return (
     <div className="gifAndFavContainer">
+      {/* <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="colored"
+      /> */}
       <ThemeProvider theme={theme}>
         <Modal open={openModal} onClose={handleCloseModal}>
           <Box

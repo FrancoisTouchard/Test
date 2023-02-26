@@ -12,11 +12,12 @@ const themos = {
   },
 };
 
-export const DeleteGif = ({ gif, gifs, setGifs }) => {
+export const DeleteGif = ({ gif, gifs, setGifs, notifyDeleted }) => {
   const handleDelete = () => {
     const updatedGifs = gifs.filter((item) => item.title !== gif.title);
     setGifs(updatedGifs);
     localStorage.setItem("savedGifs", JSON.stringify(updatedGifs));
+    notifyDeleted();
   };
 
   return (

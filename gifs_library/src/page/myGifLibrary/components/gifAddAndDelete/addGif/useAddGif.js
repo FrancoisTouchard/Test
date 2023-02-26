@@ -1,10 +1,6 @@
 import { useState } from "react";
 
-export const useAddGif = (
-  data,
-  setOpenModal,
-  addGifToGifList
-) => {
+export const useAddGif = (data, setOpenModal, addGifToGifList, notifyAdded) => {
   const [category, setCategory] = useState("");
 
   const handleCloseModal = () => setOpenModal(false);
@@ -20,6 +16,8 @@ export const useAddGif = (
     localStorage.setItem("savedGifs", JSON.stringify(savedGifs));
     addGifToGifList(gifToSave);
     handleCloseModal();
+    notifyAdded();
+    // ici balancer le toaster
   };
 
   return {
