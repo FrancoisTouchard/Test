@@ -28,6 +28,7 @@ export const DeleteGif = ({ gif, gifs, setGifs, notifyDeleted }) => {
           maxHeight: "30px",
           minWidth: "30px",
           minHeight: "30px",
+          marginTop: "3px",
         }}
         color="secondary"
       >
