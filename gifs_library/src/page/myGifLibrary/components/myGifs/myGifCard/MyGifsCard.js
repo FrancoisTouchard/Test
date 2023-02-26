@@ -1,4 +1,5 @@
 import { DeleteGif } from "../../gifAddAndDelete/deleteGif/DeleteGif";
+import { CopyGifUrl } from "./copyGifUrl/CopyGifUrl";
 import "./myGifsCard.css";
 
 const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary, notifyDeleted }) => {
@@ -8,6 +9,7 @@ const MyGifsCard = ({ myGifsLibrary, setMyGifsLibrary, notifyDeleted }) => {
         <div className="singleCardContainer" key={index}>
           <img src={gif.url} alt={gif.title} />
           <div className="hoverDeleteBtn">
+            <CopyGifUrl gif={gif}/>
             <DeleteGif
               gif={gif}
               gifs={myGifsLibrary}
