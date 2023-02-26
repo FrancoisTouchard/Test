@@ -9,8 +9,8 @@ const SearchSection = ({
   notifyAdded,
 }) => {
   return (
-    <div className="searchContainer">
-      <div>
+    <div className="searchBarAndResultsContainer">
+      <div className="searchBarContainer">
         <SearchBarInput handleChange={searchGif} />
       </div>
       <div className="searchResultsContainer">

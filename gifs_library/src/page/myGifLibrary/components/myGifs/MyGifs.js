@@ -2,10 +2,9 @@ import "./myGifs.css";
 import MyGifsCard from "./myGifCard/MyGifsCard";
 
 const MyGifs = ({ myGifsLibrary, setMyGifsLibrary, notifyDeleted }) => {
-  console.log(myGifsLibrary.length);
   return (
     <div className="myGifsContainer">
-      <p id="myGifsTitle">My Gifs</p>
+      <p id="myGifsTitle">- My gifs -</p>
       {myGifsLibrary.length > 0 ? (
         <MyGifsCard
           myGifsLibrary={myGifsLibrary}

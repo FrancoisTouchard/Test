@@ -1,12 +1,12 @@
 .mainDiv {
   background-color: black;
   width: 100vw;
-  min-height: fit-content;
+  min-height: 100vh;
   max-height: fit-content;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
 }

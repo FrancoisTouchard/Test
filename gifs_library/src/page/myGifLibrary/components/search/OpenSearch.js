@@ -16,13 +16,18 @@ const OpenSearch = ({
   };
 
   return (
-    <div>
-      <div className="showSearch">
-        <Button sx={{ m: 1 }} variant="contained" onClick={handleClick}>
-          {showSearch ? "close search" : "search a gif"}
+    <div className="btnAndSearchContainer">
+      <div className="showSearchBtn">
+        <Button
+          id="addBtn"
+          // sx={{ m: 1 }}
+          variant="outlined"
+          onClick={handleClick}
+        >
+          {showSearch ? "close search" : "click to search a gif"}
         </Button>
       </div>
-      <div>
+      <div className="searchSection1">
         {showSearch && (
           <SearchSection
             gifsQueryResult={gifsQueryResult}

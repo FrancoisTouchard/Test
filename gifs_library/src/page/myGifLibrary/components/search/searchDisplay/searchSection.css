@@ -1,5 +1,5 @@
-.searchContainer {
-  background-color: orange;
+.searchBarAndResultsContainer {
+  /* background-color: orange; */
   width: 100vw;
   max-width: 100%;
   min-height: 10vh;
@@ -9,6 +9,10 @@
   justify-content: center;
   align-items: center;
   margin-top: 1%;
+}
+
+.searchBarContainer {
+  width: 100%;
 }
 
 .searchResultsContainer {

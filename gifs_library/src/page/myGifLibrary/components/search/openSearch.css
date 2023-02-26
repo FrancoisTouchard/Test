@@ -1,8 +1,19 @@
-.showSearch {
-  background-color: blue;
+.btnAndSearchContainer {
+  width: 100%;
+  min-height: 30vh;
+  /* height: 20vh; */
+  /* background-color: red; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1%;
-  width: 100%;
 }
+
+.showSearchBtn {
+  margin-top: 2%;
+}
+
+/* .searchSection1 {
+  display: flex;
+  background-color: purple;
+} */

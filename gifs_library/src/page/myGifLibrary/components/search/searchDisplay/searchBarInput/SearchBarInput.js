@@ -2,12 +2,12 @@ import "./SearchBarInput.css";
 
 const SearchBarInput = ({ handleChange }) => {
   return (
-    <div className="searchBarInputContainer">
-      <div className="searchBarInput">
+    <div className="searchBarFull">
+      <div className="searchBarInputContainer">
         <input
           type="text"
-          className="searchBar"
-          placeholder="Search a gif"
+          className="searchBarInput"
+          placeholder="Search a gif here..."
           onChange={(e) => handleChange(e.target.value)}
         ></input>
       </div>
