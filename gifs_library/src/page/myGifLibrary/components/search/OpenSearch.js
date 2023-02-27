@@ -20,7 +20,6 @@ const OpenSearch = ({
       <div className="showSearchBtn">
         <Button
           id="addBtn"
-          // sx={{ m: 1 }}
           variant="outlined"
           onClick={handleClick}
         >

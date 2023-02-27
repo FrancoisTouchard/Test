@@ -1,9 +1,7 @@
 import { TextField, Typography, Button, Modal, Box } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// import { ThemeProvider } from "styled-components";
 import { lightBlue } from "@mui/material/colors";
 import { useAddGif } from "./useAddGif";
-// import { ToastContainer, toast } from "react-toastify";
 
 // style for modal
 const styleModal = {
@@ -18,15 +16,6 @@ const styleModal = {
   boxShadow: 24,
   p: 4,
 };
-
-// color theme for buttons
-// const theme1 = createTheme({
-//   palette: {
-//     primary: {
-//       main: lightBlue,
-//     },
-//   },
-// });
 
 const theme = createTheme({
   palette: {

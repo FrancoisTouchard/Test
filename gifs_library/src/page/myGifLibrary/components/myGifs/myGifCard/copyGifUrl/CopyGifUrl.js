@@ -1,13 +1,13 @@
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import { Button } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { red } from "@mui/material/colors";
+import { lightBlue } from "@mui/material/colors";
 // import React, { useState } from "react";
 
-// color theme for buttons
-const theme = createTheme({
+// color theme for button
+const theme1 = createTheme({
   palette: {
-    secondary: red,
+    primary: lightBlue,
   },
 });
 
@@ -15,7 +15,8 @@ export const CopyGifUrl = ({ gif }) => {
   //   const [copiedUrl, setCopiedUrl] = useState(false);
   const handleCopy = () => {
     const gifUrl = gif.url;
-    console.log(gifUrl);
+    // console.log(gifUrl);
+    window.confirm("GIF URL : " + gifUrl);
     // NOT FUNCTIONAL
     // navigator.clipboard.writeText(gifUrl).then(
     //   () => {
@@ -28,7 +29,7 @@ export const CopyGifUrl = ({ gif }) => {
     // window.alert("copied !");
   };
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme1}>
       <Button
         variant="contained"
         onClick={handleCopy}
@@ -37,8 +38,9 @@ export const CopyGifUrl = ({ gif }) => {
           maxHeight: "30px",
           minWidth: "30px",
           minHeight: "30px",
+          color: "white",
         }}
-        color="secondary"
+        color="primary"
       >
         <ContentCopyIcon />
       </Button>
