@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+
+.myGifsCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 30vh;
+  max-height: fit-content;
+  margin: 0 2%;
+  background-color: black;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.singleCardContainer {
+  width: 220px;
+  height: 250px;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleCardContainer img {
+  height: auto;
+  min-height: 90%;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 33px;
+}
+
+.hoverDeleteBtn {
+  position: absolute;
+  top: 5%;
+  left: 75%;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.singleCardContainer:hover .hoverDeleteBtn {
+  opacity: 1;
+}
+
+.categoryContainer {
+  height: 10%;
+  max-height: 10%;
+  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+}
+
+#gifCategory {
+  font-family: "Tilt Warp", Verdana, sans-serif;
+  color: white;
+  max-height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

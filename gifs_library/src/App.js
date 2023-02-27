@@ -1,9 +1,9 @@
-import Homepage from "./page/myGifLibrary/HomePage";
+import HomePage from "./page/homePage/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <Homepage />
+      <HomePage />
     </div>
   );
 }

@@ -1,0 +1,19 @@
+.searchBarAndResultsContainer {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 10vh;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
+
+.searchBarContainer {
+  width: 100%;
+}
+
+.searchResultsContainer {
+  max-width: 95%;
+}

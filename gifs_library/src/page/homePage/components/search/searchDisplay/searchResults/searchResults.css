@@ -1,0 +1,8 @@
+.cardsResultContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  margin: 2%;
+  border-radius: 22px;
+}
