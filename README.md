@@ -8,11 +8,11 @@ This project is a single page application that allow its users to browse the Gip
 ## Project set up
 
 ### React
-This project was made with the version 18.2.0 of React, installed via the command `npx create-react-app my-app`
+This project was made with the version 18.2.0 of React, installed via the command `npx create-react-app gifs_library`
 
 
 ### Dependencies 
-After cloning this repository, you can install all the dependencies at once using `npm install` at the root of the React project.
+After cloning this repository, you can install all the dependencies at once using `npm install` at the root of the gifs_library directory.
 
 The following libraries are included this project : 
 
