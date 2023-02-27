@@ -8,12 +8,13 @@ This project is a single page application that allow its users to browse the Gip
 ## Project set up
 
 ### React
-This project was made with the version 18.2.0 of React. 
-To install React, use `npx create-react-app my-app`
+This project was made with the version 18.2.0 of React, installed via the command `npx create-react-app my-app`
 
 
 ### Dependencies 
-To install the following dependencies at once, run `npm install` at the root of the React project.
+After cloning this repository, you can install all the dependencies at once using `npm install` at the root of the React project.
+
+The following libraries are included this project : 
 
 [React-Toastify](https://www.npmjs.com/package/react-toastify) : `npm install react-toastify`
 
